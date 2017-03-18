@@ -1,0 +1,6 @@
+# Czech strings go here for Rails i18n
+cs:
+  label_feeds_access_key_created_on: "Přístupový klíč pro Atom byl vytvořen %{value}"
+  label_added_time_by: "Přidáno uživatelem %{author} %{age}"
+  label_updated_time_by: "Aktualizováno uživatelem %{author} %{age}"
+  label_updated_time: "Aktualizováno %{value}"
