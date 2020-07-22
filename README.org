@@ -3,5 +3,13 @@
 Little plugin which auto update relative times (1 minute ago) as times go. No
 more "updated 1 minute ago" confusion after lunch breaks :)
 
+* Installation
+Just clone repo into =plugins= directory and run =redmine:plugins:assets= /rake/ task.
+
+#+begin_src sh
+git clone https://github.com/igloonet/redmine_live_relative_time.git plugins/redmine_live_relative_time
+bundle exec rake redmine:plugins:assets
+#+end_src
+
 * License
 This plugin is released under [[./LICENSE][MIT License]].
