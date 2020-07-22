@@ -1,3 +1,0 @@
-= redmine_relative_time
-
-Plugin zobrazuje a mění relativní časy (před 3 hodinami apod.) živě pomocí Javascriptu.

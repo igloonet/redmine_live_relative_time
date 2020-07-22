@@ -1,0 +1,7 @@
+#+TITLE: Redmine relative time
+
+Little plugin which auto update relative times (1 minute ago) as times go. No
+more "updated 1 minute ago" confusion after lunch breaks :)
+
+* License
+This plugin is released under [[./LICENSE][MIT License]].
