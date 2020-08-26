@@ -1,6 +1,6 @@
 require 'redmine'
 require 'application_helper_patch'
-require_dependency 'hooks/append_moment_javascript_head_hook'
+require_dependency 'hooks/append_javascript_head_hook'
 
 Redmine::Plugin.register :redmine_live_relative_time do
   name 'Redmine Live Relative Time'
