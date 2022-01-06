@@ -56,7 +56,7 @@
           toRemove.push(this);
         else if (moment.isMoment(data.moment)) {
           var from = $this.html(),
-              to = data.moment.fromNow();
+              to = data.moment.fromNow(true);
 
           if (from != to) {
             var e = $.Event('change.livestamp');
