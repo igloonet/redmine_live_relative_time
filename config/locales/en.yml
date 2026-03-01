@@ -1,3 +1,3 @@
-# English strings go here for Rails i18n
-en:
-  # my_label: "My label"
+en: {}
+# Plugin uses Rails' built-in distance_of_time_in_words for server-side rendering
+# Client-side JS handles live updates in English

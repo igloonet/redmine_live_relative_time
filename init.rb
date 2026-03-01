@@ -1,16 +1,16 @@
-require 'redmine'
-require 'application_helper_patch'
-require_dependency 'hooks/append_moment_javascript_head_hook'
-
 Redmine::Plugin.register :redmine_live_relative_time do
   name 'Redmine Live Relative Time'
-  author 'David Manda, igloonet.cz'
-  url 'https://github.com/igloonet/redmine_live_relative_time.git'
-  author_url 'https://igloonet.cz'
-  description 'Little plugin which auto update relative times (1 minute ago) as times go.'
-  version '1.1'
-
-  Rails.configuration.to_prepare do
-    ApplicationHelper.send(:include, RedmineLiveRelativeTime)
-  end
+  author 'igloonet'
+  description 'Live-updating relative timestamps on Redmine pages'
+  version '2.0.0'
+  url 'https://git.igloonet.cz/redmine/redmine_live_relative_time'
 end
+
+# Note: init.rb is already executed inside to_prepare by Redmine::PluginLoader.
+# Do NOT wrap in another to_prepare -- that causes double-nesting and the prepend
+# only takes effect on the next prepare cycle (which may never come in rails runner).
+unless ApplicationHelper.ancestors.include?(RedmineLiveRelativeTime::Patches::ApplicationHelperPatch)
+  ApplicationHelper.prepend(RedmineLiveRelativeTime::Patches::ApplicationHelperPatch)
+end
+
+require_relative 'lib/redmine_live_relative_time/hooks/head_hook'
